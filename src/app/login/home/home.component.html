@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Usuarios</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr class="text-center">
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Hash(password)</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center" *ngFor="let user of User">
+                        <td>{{user.idUsuario}}</td>
+                        <td>{{user.name}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.passwork}}</td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <div class="card" style="color:black">
+                <h3>Usuario logeado: {{dato}}</h3>
+                <div class="text-center">
+                    <button type="button" (click)="exit()" class="btn btn-danger btn-block b_r_20 m-t-20">exit</button>
+                  </div>
+            </div>
+
+        </div>
+    </div>
+</div>
